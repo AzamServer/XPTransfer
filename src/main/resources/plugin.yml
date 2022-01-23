@@ -1,0 +1,19 @@
+name: XPTransfer
+version: '${project.version}'
+main: com.azamserver.xptransfer.Main
+api-version: 1.18
+authors: [ Ali ]
+description: Allow players to transfer their levels to a different player
+website: https://card.azamserver.com/
+commands:
+  xptransfer:
+    description: Issuing command will transfer specified amount of XP levels from one player to another if correct perms and arguments are given
+    usage: For help, please issue the command "/xptransfer help"
+permissions:
+  xptransfer.*:
+    description: Gives access to /xptransfer command
+    default: op
+    children:
+      xptransfer.ownXP: true
+      xptransfer.otherXP: true
+      xptransfer.helpMenu: true
